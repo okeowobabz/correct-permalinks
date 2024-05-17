@@ -41,7 +41,7 @@ function update_permalinks() {
 
             
             // Check if the permalink is valid
-            if (!cpt_is_valid_url($permalink) || empty($permalink)) {
+            if (!cpt_url_exists($permalink) || empty($permalink)) {
                 // If the permalink is not valid, redirect to homepage or empty
                 wp_update_post(array(
                     'ID' => $post_id,
