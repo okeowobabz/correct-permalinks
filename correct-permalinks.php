@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Correct Permalinks Plugin
-Plugin URI:  http://wordpress.com
+Plugin URI:  https://www.wordpress.com
 Description: A plugin to correct the permalinks of an existing custom post type - mailing_list.
 Version:     1.0.0
 Author:      Okeowo Babatunde
-Author URI:  http://okeowobabz.com
+Author URI:  https://www.okeowobabz.com
 License:     GPL2
 */
 
