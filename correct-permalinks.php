@@ -70,7 +70,7 @@ function update_permalinks() {
     
 }
 
-add_action('admin_init', 'check_and_convert_permalinks')
+add_action('admin_init', 'update_permalinks')
 
 
 ?>
