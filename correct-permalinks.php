@@ -46,23 +46,25 @@ function update_permalinks() {
                 wp_update_post(array(
                     'ID' => $post_id,
                     'post_name' => home_url()
+                    ///
                 ));
-            } else if(preg_match($pattern, $permalink)){
+            } else if(preg_match($pattern, $post_name)){
                 // Remove the file extension
-                $new_slug = preg_replace($pattern, '', $permalink);
+                $new_slug = preg_replace($pattern, '', $post_name);
                 // Update the post slug
                 wp_update_post(array(
                     'ID' => $post_id,
                     'post_name' => $new_slug
                 ));
-            } else if (strpos($permalink, 'http') === 0){
+            } else if (strpos($permalink, 'http://') === 0){
                 // Check if the permalink starts with 'http'
-                $new_permalink = str_replace('http', 'https', $permalink);
+                $new_permalink = str_replace('http://', 'https://', $permalink);
                 // Update the post slug
                 wp_update_post(array(
                     'ID' => $post_id,
                     'post_name' => $new_permalink
                 ));
+                //
             }
         }
     wp_reset_postdata();
